@@ -18,12 +18,19 @@
                 background-color:#89909f;
                 font-family: 'Roboto', sans-serif;
             }
-            .text-center{
-                text-align: center;
-            }
             a{
                 color: white;
                 text-decoration: none;
+            }
+            .container{
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+            .text-center{
+                text-align: center;
+            }
+            .mt-5{
+                margin-top: 5rem;
             }
 
 
@@ -34,12 +41,15 @@
         <div class='text-center'>
             <h1>{{$title}}</h1>
         </div>
-        @foreach ($data as $key => $value )
-            <p><strong>{{ $key }}</strong>: {{ $value }}</p>    
-            
-        @endforeach
+        <div class='container'>
+            @foreach ($data as $key => $value )
+                <p><strong>{{ $key }}</strong>: {{ $value }}</p>    
+                
+            @endforeach
 
-        <div>
+        </div>
+
+        <div class='mt-5'>
             <a href = "{{route('home')}}">Ritorna alla Home</a>
         </div>
         

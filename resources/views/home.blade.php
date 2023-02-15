@@ -29,6 +29,10 @@
                 text-align: center;
             }
 
+            .color-red{
+                color: red;
+            }
+
             .container{
                 max-width: 1200px;
                 margin: 0 auto;
@@ -48,7 +52,7 @@
     </head>
     <body >
         <div class='text-center'>
-            <h1>{{$hello_world}}</h1>
+            <h1 class='color-red'>{{$hello_world}}</h1>
         </div>
         <div class='container'>
             <ul class='unstyled-list'>

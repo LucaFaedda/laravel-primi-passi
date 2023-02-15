@@ -18,13 +18,23 @@
                 background-color:#c3acce;
                 font-family: 'Roboto', sans-serif;
             }
+            a{
+                color: white;
+                text-decoration: none;
+            }
+
+            .container{
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+
             .text-center{
                 text-align: center;
             }
 
-            a{
-                color: white;
-                text-decoration: none;
+
+            .mt-5{
+                margin-top: 5rem;
             }
 
 
@@ -35,9 +45,12 @@
         <div class='text-center'>
             <h1>{{$title}}</h1>
         </div>
-        <p>Chi siamo: {{$data['name']}}</p>
-        <p>Linguaggi imparati: {{$data['language']}}</p>
-        <div>
+        <div class='container'>
+            <p>Chi siamo: {{$data['name']}}</p>
+            <p>Linguaggi imparati: {{$data['language']}}</p>
+
+        </div>
+        <div class='mt-5'>
             <a href = "{{route('home')}}">Ritorna alla Home</a>
         </div>
     </body>
