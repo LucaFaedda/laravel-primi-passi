@@ -16,8 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     $hello_world = 'Hello World';
     $data = [
-        'chi_siamo' => '<a href="/about-us">Chi Siamo</a>',
-        'contatti' => '<a href="/contatti">Contatti</a>'
+        'chi_siamo' => '/about-us',
+        'contatti' => '/contatti'
     ];
     return view('home', compact('hello_world', 'data'));
 })->name('home');

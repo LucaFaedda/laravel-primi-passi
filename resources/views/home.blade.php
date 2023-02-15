@@ -34,6 +34,15 @@
                 margin: 0 auto;
             }
 
+            .unstyled-list{
+                list-style: none;
+                display:flex;
+            }
+            li{
+                margin: 3rem;
+                font-size: 20px;
+            }
+
         </style>
        
     </head>
@@ -42,9 +51,9 @@
             <h1>{{$hello_world}}</h1>
         </div>
         <div class='container'>
-            <ul>
+            <ul class='unstyled-list'>
                 @foreach ($data as $key => $value )
-                    <li>{!!$value!!}</li>
+                    <li><a href="{{$value}}">{{$key}}</a></li>
                     <!-- in questo modo posso tranquillamente stampare i risultati, sennò mi stampava direttamente il tag a come stringa -->
                 @endforeach
             </ul>
