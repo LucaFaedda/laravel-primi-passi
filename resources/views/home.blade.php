@@ -19,9 +19,17 @@
                 font-family: 'Roboto', sans-serif;
             }
 
+            header{
+                height: 150px;
+                background-color: #ffffff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
             
             a{
-                color: white;
+                color: black;
                 text-decoration: none;
             }
             
@@ -36,6 +44,7 @@
             .container{
                 max-width: 1200px;
                 margin: 0 auto;
+                width: 100%;
             }
 
             .unstyled-list{
@@ -54,13 +63,14 @@
         <div class='text-center'>
             <h1 class='color-red'>{{$hello_world}}</h1>
         </div>
-        <div class='container'>
-            <ul class='unstyled-list'>
-                @foreach ($data as $key => $value )
-                    <li><a href="{{$value}}">{{str_replace("_", " " ,$key)}}</a></li>
-                    <!-- in questo modo posso tranquillamente stampare i risultati, sennò mi stampava direttamente il tag a come stringa -->
-                @endforeach
-            </ul>
-        </div>
+        <header>
+            <div class='container'>
+                <ul class='unstyled-list'>
+                    @foreach ($data as $key => $value )
+                        <li><a href="{{$value}}">{{str_replace("_", " " ,$key)}}</a></li>
+                    @endforeach
+                </ul>
+            </div>
+        </header>
     </body>
 </html>
