@@ -53,7 +53,7 @@
         <div class='container'>
             <ul class='unstyled-list'>
                 @foreach ($data as $key => $value )
-                    <li><a href="{{$value}}">{{$key}}</a></li>
+                    <li><a href="{{$value}}">{{str_replace("_", " " ,$key)}}</a></li>
                     <!-- in questo modo posso tranquillamente stampare i risultati, sennò mi stampava direttamente il tag a come stringa -->
                 @endforeach
             </ul>
