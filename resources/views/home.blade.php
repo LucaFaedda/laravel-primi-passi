@@ -19,15 +19,20 @@
                 font-family: 'Roboto', sans-serif;
             }
 
-            .text-center{
-                text-align: center;
-            }
-
+            
             a{
                 color: white;
                 text-decoration: none;
             }
+            
+            .text-center{
+                text-align: center;
+            }
 
+            .container{
+                max-width: 1200px;
+                margin: 0 auto;
+            }
 
         </style>
        
@@ -36,9 +41,13 @@
         <div class='text-center'>
             <h1>{{$hello_world}}</h1>
         </div>
-        <div>
-            <a href="{{route('about_us')}}">Chi Siamo</a>
-            <a href="{{route('contacts')}}">Contatti</a>
+        <div class='container'>
+            <ul>
+                @foreach ($data as $key => $value )
+                    <li>{!!$value!!}</li>
+                    <!-- in questo modo posso tranquillamente stampare i risultati, sennò mi stampava direttamente il tag a come stringa -->
+                @endforeach
+            </ul>
         </div>
     </body>
 </html>
