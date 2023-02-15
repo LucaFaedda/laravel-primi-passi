@@ -27,7 +27,6 @@
                 justify-content: center;
             }
 
-            
             a{
                 color: black;
                 text-decoration: none;
@@ -45,6 +44,21 @@
                 max-width: 1200px;
                 margin: 0 auto;
                 width: 100%;
+                display: flex;
+                align-items: center;
+            }
+
+            .logo{
+                width: 30%;
+            }
+
+            .logo img{
+                width: 50%;
+                
+            }
+
+            .lista{
+                width: 70%;
             }
 
             .unstyled-list{
@@ -65,11 +79,16 @@
         </div>
         <header>
             <div class='container'>
-                <ul class='unstyled-list'>
-                    @foreach ($data as $key => $value )
-                        <li><a href="{{$value}}">{{str_replace("_", " " ,$key)}}</a></li>
-                    @endforeach
-                </ul>
+                <div class='logo'>
+                    <img src="https://www.universalmovies.it/wp-content/uploads/2022/06/il-signore-degli-anelli-gli-anelli-del-potere-empire.jpg" alt='logo'>
+                </div>
+                <div class='lista'>
+                    <ul class='unstyled-list'>
+                        @foreach ($data as $key => $value )
+                            <li><a href="{{$value}}">{{str_replace("_", " " ,$key)}}</a></li>
+                        @endforeach
+                    </ul>
+                </div>
             </div>
         </header>
     </body>
