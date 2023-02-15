@@ -15,16 +15,11 @@
 
         <style>
             body{
-                background-color:#c3acce;
+                background-color:#89909f;
                 font-family: 'Roboto', sans-serif;
             }
             .text-center{
                 text-align: center;
-            }
-
-            a{
-                color: white;
-                text-decoration: none;
             }
 
 
@@ -35,10 +30,6 @@
         <div class='text-center'>
             <h1>{{$title}}</h1>
         </div>
-        <p>Chi siamo: {{$data['name']}}</p>
-        <p>Linguaggi imparati: {{$data['language']}}</p>
-        <div>
-            <a href = "{{route('home')}}">Ritorna alla Home</a>
-        </div>
+        
     </body>
 </html>

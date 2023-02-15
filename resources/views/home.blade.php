@@ -18,8 +18,14 @@
                 background-color:#003554 ;
                 font-family: 'Roboto', sans-serif;
             }
+
             .text-center{
                 text-align: center;
+            }
+
+            a{
+                color: white;
+                text-decoration: none;
             }
 
 
@@ -32,6 +38,7 @@
         </div>
         <div>
             <a href="{{route('about_us')}}">Chi Siamo</a>
+            <a href="{{route('contacts')}}">Contatti</a>
         </div>
     </body>
 </html>
