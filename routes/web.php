@@ -16,8 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     $hello_world = 'Hello World';
     $data = [
-        'chi_siamo' => '/about-us',
-        'contatti' => '/contatti'
+        'chi_siamo' => route('about_us'), // non andava così "route('about_us')"  perchè le virgolette la rendevano una STRINGA
+        'contatti' => route('contacts')
     ];
     return view('home', compact('hello_world', 'data'));
 })->name('home');
