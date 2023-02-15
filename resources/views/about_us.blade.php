@@ -15,7 +15,7 @@
 
         <style>
             body{
-                background-color:#003554 ;
+                background-color:#c3acce;
                 font-family: 'Roboto', sans-serif;
             }
             .text-center{
@@ -28,10 +28,9 @@
     </head>
     <body >
         <div class='text-center'>
-            <h1>{{$hello_world}}</h1>
+            <h1>{{$title}}</h1>
         </div>
-        <div>
-            <a href="{{route('about_us')}}">Chi Siamo</a>
-        </div>
+        <p>Chi siamo: {{$data['name']}}</p>
+        <p>Linguaggi imparati: {{$data['language']}}</p>
     </body>
 </html>

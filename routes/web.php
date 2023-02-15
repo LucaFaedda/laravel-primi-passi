@@ -17,3 +17,13 @@ Route::get('/', function () {
     $hello_world = 'Hello World';
     return view('home', compact('hello_world'));
 });
+
+Route::get('about-us', function () {
+    $data = [
+        'name' => 'Junior Development',
+        'language' => 'HTML, CSS, JS, PHP',
+
+    ];
+    $title = 'Chi siamo';
+    return view('about_us', compact('data', 'title'));
+})->name('about_us');
