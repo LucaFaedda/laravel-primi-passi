@@ -21,6 +21,10 @@
             .text-center{
                 text-align: center;
             }
+            a{
+                color: white;
+                text-decoration: none;
+            }
 
 
         </style>
@@ -29,6 +33,14 @@
     <body >
         <div class='text-center'>
             <h1>{{$title}}</h1>
+        </div>
+        @foreach ($data as $key => $value )
+            <p><strong>{{ $key }}</strong>: {{ $value }}</p>    
+            
+        @endforeach
+
+        <div>
+            <a href = "{{route('home')}}">Ritorna alla Home</a>
         </div>
         
     </body>
